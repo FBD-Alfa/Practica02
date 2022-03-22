@@ -10,25 +10,29 @@ public class PagoOnline extends Pago{
     this.titular = titular;
   }
 
-  private void setNoTargeta(int noTargeta){
+  public void setNoTargeta(int noTargeta){
     this.noTargeta = noTargeta;
   }
 
-  private int getNoTargeta(){
+  public int getNoTargeta(){
     return noTargeta;
   }
 
-  private void setVencimiento(String vencimiento){
+  public void setVencimiento(String vencimiento){
     this.vencimiento = vencimiento;
   }
 
-  private String getVencimiento(){
+  public String getVencimiento(){
     return vencimiento;
   }
 
-  /**public String getTitular(){
-    return duenio.getNombre();
-  }*/
+  public void setTitular(String titular){
+    this.titular = titular;
+  }
+
+  public String getTitular(){
+    return titular;
+  }
 
   public String toString(){
     return noTargeta+","+ vencimiento+","+titular;
