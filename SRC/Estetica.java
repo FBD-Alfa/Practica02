@@ -1,5 +1,7 @@
 /**
  * Clase que representa una estética veterinaria Little Friend.
+ * @author Jesús Alberto Reyes Gutiérrez
+ * @version 21/03/2022
  */
 public class Estetica {
     private int clave;
@@ -9,6 +11,15 @@ public class Estetica {
     private String horario;
     private short noConsultorios;
 
+    /**
+     * 
+     * @param clave
+     * @param nombre
+     * @param direccion
+     * @param telefono
+     * @param horario
+     * @param noConsultorios
+     */
     public Estetica(int clave, String nombre, Direccion direccion,
                 long telefono, String horario, short noConsultorios) {
         this.clave = clave;
@@ -117,7 +128,10 @@ public class Estetica {
 
     @Override
     public String toString() {
-        // TODO Auto-generated method stub
+        /**
+         * FALTA IMPLEMENTAR (Devuelve los atributos en el
+        formato del csv).
+         */
         return super.toString();
     }
 }
