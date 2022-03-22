@@ -3,12 +3,12 @@ public class PagoFisico extends Pago{
   private boolean targeta = false;
   private boolean efectivo = false;
 
-  private void setEsTargeta(boolean terminalTargeta){
-    this.terminalTargeta = terminalTargeta;
+  private void setEsTargeta(boolean targeta){
+    this.targeta = targeta;
   }
 
   private boolean esTargeta(){
-    return terminalTargeta;
+    return targeta;
   }
 
   private void setEsEfectivo(boolean efectivo){
