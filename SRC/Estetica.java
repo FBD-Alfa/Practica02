@@ -128,10 +128,7 @@ public class Estetica {
 
     @Override
     public String toString() {
-        /**
-         * FALTA IMPLEMENTAR (Devuelve los atributos en el
-        formato del csv).
-         */
-        return super.toString();
+        return this.clave + "," + this.nombre + "," + this.direccion.toString() +
+        "," + telefono + "," + horario + "," + noConsultorios;
     }
 }

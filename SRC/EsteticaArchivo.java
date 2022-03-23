@@ -1,3 +1,6 @@
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+
 /**
  * Clase que permite leer y escribir una Estetica sobre archivos tipo csv.
  * @author Jesús Alberto Reyes Gutiérrez
@@ -9,7 +12,7 @@ public class EsteticaArchivo extends LeeryEscribir {
      * 
      */
     public EsteticaArchivo(){
-        super("Estetica.csv");
+        super("/home/alberto/UNAM/2022-2/Bases/Practica02/SRC/Estetica.csv");
     }
 
     /**
@@ -29,23 +32,34 @@ public class EsteticaArchivo extends LeeryEscribir {
      * @return
      * @throws ArchivoNoEsxiste
      */
-    public ArrayList<Estetica> leeEsteticas() throws ArchivoNoEsxiste {
+    public ArrayList<Estetica> leeEsteticas() throws FileNotFoundException {
         String[] lineas = super.leeArchivo();
-        ArrayList<Operador> operadores = new ArrayList<>();
+        ArrayList<Estetica> esteticas = new ArrayList<>();
         for (int i = 0; i < lineas.length; i++) {
             if (!lineas[i].equals("null")) {
-                operadores.add(parseaOperador(lineas[i]));
+                esteticas.add(parseaEstetica(lineas[i]));
             }
         }
-	    return operadores;
+	    return esteticas;
     }
 
     /**
-     * FALTA IMPLEMENTAR
+     * 
      * @param estetica
      * @return
      */
-    private Estetica parseaEstetica(String estetica) {
-        return null;
+    private static Estetica parseaEstetica(String estetica) {
+        String[] linea = estetica.trim().split(",");
+        int clave = Integer.parseInt(linea[0]);
+        String nombre = linea[1];
+        String estado = linea[2];
+        String calle = linea[3];
+        String cp = linea[4];
+        String numDir = linea[5];
+        long numero = Long.parseLong(linea[6]);
+        String horario = linea[7];
+        short numConsult = Short.parseShort(linea[8]);
+        Direccion direccion = new Direccion(estado, calle, cp, numDir);
+        return new Estetica(clave, nombre, direccion, numero, horario, numConsult);
     }
 }

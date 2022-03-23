@@ -84,4 +84,9 @@ public class Direccion {
     public void setNumero(String numero) {
         this.numero = numero;
     }
+
+    @Override
+    public String toString() {
+        return this.estado + "," + this.calle + "," + this.cp + "," + this.numero;
+    }
 }

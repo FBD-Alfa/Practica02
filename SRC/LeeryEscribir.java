@@ -1,9 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package EjemploPractica2;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -22,44 +16,47 @@ public class LeeryEscribir {
     
     /**
      * Constructor por parametros
-     * @param nombreArchivo -- el NombredelArchivo que se creara
+     * @param nombreArchivo -- El NombredelArchivo que se creara
      */
     public LeeryEscribir(String nombreArchivo) {
-	file = new File(nombreArchivo);
+	    file = new File(nombreArchivo);
     }
+
     /**
      * Metodo que escribe la información en file (archivo a modificar)
      * @param linea -- La información a escribir
      */
-    public void escribeArchivo(String linea){
+    public void escribeArchivo(String linea) {
         FileWriter filew; //Objeto para escribir el archivo
         try{
             filew = new FileWriter(file); //Inicializamos para escribir en FILE
             filew.write(linea); //Escribimos en el objeto
             filew.close(); //Cerramos
-        }catch (IOException e){
+        } catch (IOException e) {
             System.out.println(e.getMessage());
         }
     }
+
     /**
-     * Metodo que leeArchivo utilizando Scanner
-     * Lee el contenido del file y lo convierte en un arreglo de lineas
-     * @return String[] -- contiene como elemento cada linea del archivo
-     * @throws ArchivoNoExiste -- Excepcion que sale cuando el archivo no se ha a creado
+     * Metodo que leeArchivo utilizando Scanner.
+     * Lee el contenido del file y lo convierte en un arreglo de lineas.
+     * @return String[] -- Contiene como elemento cada linea del archivo.
+     * @throws ArchivoNoExiste -- Excepcion que sale cuando el archivo no se ha a creado.
      */
-    public String[] leeArchivo() throws ArchivoNoExiste{		
-	Scanner input = null;
-	String lineas = "";
-	try {
+    public String[] leeArchivo() throws FileNotFoundException{		
+	    Scanner input = null;
+	    String lineas = "";
+	    try {
             input = new Scanner(file);
             while (input.hasNextLine()) {
-            lineas += input.nextLine() + "|";
+                lineas += input.nextLine() + "|";
             }
-	} catch (FileNotFoundException e) {
-            throw new ArchivoNoExiste("No hay datos que se puedan leer");
-	}
-	String lines [] = lineas.split("\\|");
-	return lines;
+            input.close();
+	    } catch (FileNotFoundException e) {
+            throw new FileNotFoundException("No hay datos que se puedan leer");
+	    }
+	    String lines [] = lineas.split("\\|");
+	    return lines;
     }
 
 }
