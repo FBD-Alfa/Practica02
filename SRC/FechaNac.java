@@ -6,7 +6,7 @@
 public class FechaNac {
       private int dia;
       private String mes;
-      private int año;
+      private int anio;
 
     /**
      * Constructor con todos los atributos.
@@ -14,10 +14,10 @@ public class FechaNac {
      * @param mes -- El mes de nacimiento del dueño.
      * @param año -- Año de nacimiento del dueño.
      */
-    public FechaNac( int dia, String mes; int año) {
+    public FechaNac( int dia, String mes; int anio) {
         this.dia = dia;
         this.mes = mes;
-        this.año = año;
+        this.anio = anio;
     }
 
     /**
@@ -54,16 +54,16 @@ public class FechaNac {
      * Método que obtiene el estado en el que se encuentra la 
      * @return -- Estado en el que se encuentra la 
      */
-    public int getAño() {
-        return año;
+    public int getAnio() {
+        return anio;
     }
 
     /**
      * Método que modifica el estado de la 
      * @param 
      */
-    public void setAño(int año) {
-        this.año = año;
+    public void setAnio(int anio) {
+        this.anio = anio;
     }
     
     
@@ -73,7 +73,7 @@ public class FechaNac {
      */
     @Override
    public String toString(){
-     return dia+","+mes+","+año;
+     return dia+","+mes+","+anio;
   }
     }
 }
