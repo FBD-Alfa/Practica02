@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class PagoFisicoArchivo extends LeeryEscribir{
     /**
-     * Constructor por omision que crea el archivo PagoOnline.csv
+     * Constructor por omision que crea el archivo PagoFisico.csv
      */
     public PagoFisicoArchivo(){
       super("PagoFisico.csv");
@@ -22,8 +22,8 @@ public class PagoFisicoArchivo extends LeeryEscribir{
     }
 
     /**
-     * Metodo que convierte un arreglo de String a un arreglo de Pago Online
-     * @return pagos online -- El arreglo de pago online
+     * Metodo que convierte un arreglo de String a un arreglo de pagos fisicos
+     * @return pagos fisicos -- El arreglo de pagos fisicos
      * @throws ArchivoNoExiste -- Se lanza la excepción cuando el archivo no existe
      */
     public ArrayList<PagoFisico> leePagosFisicos() throws ArchivoNoExiste {

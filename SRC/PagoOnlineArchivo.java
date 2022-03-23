@@ -11,7 +11,7 @@ public class PagoOnlineArchivo extends LeeryEscribir{
 
     /**
      * Metodo que prepara el arreglo de Pagos Online para que puede ser guardado
-     * @param po -- El arreglo de pago online
+     * @param pagoOnline -- El arreglo de pago online
      */
     public void escribePagosOnline(ArrayList<PagoOnline> pagoOnline) {
       String lineaPago = "";
