@@ -48,16 +48,23 @@ public class PagoOnlineArchivo extends LeeryEscribir{
      */
     private PagoOnline parseaPagoOnline(String cadenaPagoOnline) {
       String linea[] = cadenaPagoOnline.trim().split(",");
-      String noTargetaCadena = linea[0];
-      String vencimiento = linea[1];
-      String titular = linea[2];
-      int noTargeta = 0;
+      String numeroCadena = linea[0];
+      String titular = linea[1];
+      String cvvCadena = linea[2];
+      String vencimiento = linea[3];
+      String cantidadCadena = linea[4];
+      int numero = 0;
+      int cvv = 0;
+      int cantidad = 0;
       try{
-            noTargeta = Integer.parseInt(noTargetaCadena);
+            numero = Integer.parseInt(numeroCadena);
+            cvv = Integer.parseInt(cvvCadena);
+            cantidad = Integer.parseInt(cantidadCadena);
+
         }
         catch (NumberFormatException ex){
-            ex.printStackTrace();
+            System.out.println("Alguno de los números ingresados no es valido");
         }
-      return new PagoOnline(noTargeta, vencimiento, titular);
+      return new PagoOnline(numero,titular,cvv,vencimiento,cantidad);
       }
     }
