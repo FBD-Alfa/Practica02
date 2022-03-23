@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
-
+/**
+ * Clase que permite leer y escribir un pago fisico sobre archivos tipo csv.
+ * @author Sánchez Urbano Cynthia Lizbeth
+ * @version 21/03/2022
+ */
 public class PagoFisicoArchivo extends LeeryEscribir{
     /**
      * Constructor por omision que crea el archivo PagoFisico.csv

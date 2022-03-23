@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * Clase MenuPagoOnline, maneja los menus de los pagos online.
+ * @author Sánchez Urbano Cynthia
+ * @version 21/03/2022
+ */
 public class MenuPagoOnline {
   private ArrayList<PagoOnline> pagosOnline = new ArrayList<>();
   private PagoOnlineArchivo archivo = new PagoOnlineArchivo();

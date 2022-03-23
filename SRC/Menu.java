@@ -3,7 +3,9 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- *
+ * Clase Menu, maneja los menus de cada objeto.
+ * @author Sánchez Urbano Cynthia
+ * @version 21/03/2022
  */
 public class Menu {
     /* Variable entrada, permite la interacción con el usuario. */

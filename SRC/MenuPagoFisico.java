@@ -1,7 +1,11 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
+/**
+ * Clase MenuPagoFisico, maneja los menus de los pagos fisicos.
+ * @author Sánchez Urbano Cynthia
+ * @version 21/03/2022
+ */
 public class MenuPagoFisico {
   private ArrayList<PagoFisico> pagosFisicos = new ArrayList<>();
   private PagoFisicoArchivo archivo = new PagoFisicoArchivo();
