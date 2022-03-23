@@ -12,7 +12,7 @@ public class Mascota{
   private FechaNac fechanac;
   private Dueño duenio;
   private String nombre;
-  private double peso;
+  private float peso;
   private String especie;
   private String raza;
 
@@ -125,7 +125,7 @@ public class Mascota{
      * Obtiene la
      * @return --
      */
-    public double getPeso() {
+    public float getPeso() {
         return peso;
     }
 
@@ -133,7 +133,7 @@ public class Mascota{
      * Modifica la
      * @param clave -- La nueva
      */
-    public void setPeso(double peso) {
+    public void setPeso(float peso) {
         this.peso = peso;
     }
     /**
