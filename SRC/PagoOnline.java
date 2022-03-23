@@ -1,3 +1,8 @@
+/**
+ * Clase que maneja los pagos online de Little Friend.
+ * @author Sánchez Urbano Cynthia Lizbeth
+ * @version 21/03/2022
+ */
 public class PagoOnline extends Pago{
 
   private int noTarjeta;

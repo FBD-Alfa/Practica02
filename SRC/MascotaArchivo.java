@@ -53,13 +53,13 @@ public class MascotaArchivo extends LeeryEscribir {
         int clave = Integer.parseInt(linea[0]);
         String duenio = linea[1];
         String nombre = linea[2];
-        int año = Integer.parseInt(linea[3]);
+        int anio = Integer.parseInt(linea[3]);
         String mes = linea[4];
         int dia = Integer.parseInt(linea[5]);
         float peso =  Float.parseFloat(linea[6]);
         String especie = linea[7];
         String raza = linea[8];
-        FechaNac fechanac = new FechaNac(dia, mes, año);
+        FechaNac fechanac = new FechaNac(dia, mes, anio);
         return new Mascota(clave, duenio, nombre, fechanac, peso, especie, raza);
     }
 }

@@ -1,5 +1,10 @@
 import java.util.ArrayList;
 
+/**
+ * Clase que permite leer y escribir una tarjeta sobre archivos tipo csv.
+ * @author Sánchez Urbano Cynthia Lizbeth
+ * @version 21/03/2022
+ */
 
 public class TarjetaArchivo extends LeeryEscribir{
     /**

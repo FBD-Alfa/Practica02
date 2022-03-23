@@ -1,4 +1,8 @@
-
+/**
+ * Clase que maneja los pagos fisicos de Little Friend.
+ * @author Sánchez Urbano Cynthia Lizbeth
+ * @version 21/03/2022
+ */
 public class PagoFisico extends Pago{
 
   private boolean tarjeta = false;
