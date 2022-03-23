@@ -3,7 +3,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * 
+ *
  */
 public class Menu {
     /* Variable entrada, permite la interacción con el usuario. */
@@ -52,10 +52,10 @@ public class Menu {
         String eleccion = entrada.nextLine();
         switch (eleccion) {
             case "1":
-            MenuPagoFisico mpf = new MenuPagoFisico();
+            MenuPagoFisico mpf = new MenuPagoFisico(this);
             break;
             case "2":
-            MenuPagoOnline mpo = new MenuPagoOnline();
+            MenuPagoOnline mpo = new MenuPagoOnline(this);
             break;
             case "3":
             despliegaMenu();
@@ -68,7 +68,7 @@ public class Menu {
 
     public void despliegaMenusEstetica() {
         System.out.println("\nIngresa la opción deseada:\n" +
-                            " 1-Agregar Estética.\n 2-Ver Estéticas.\n" + 
+                            " 1-Agregar Estética.\n 2-Ver Estéticas.\n" +
                             " 3-Editar Estética.\n 4-Borrar Estética.\n" +
                             " 5-Salir");
         eleccion = entrada.nextLine();
