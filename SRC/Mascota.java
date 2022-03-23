@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Mascota{
   
   private String curp;
-  private String clave;
+  private int clave;
   private FechaNac fechanac;
   private Dueño duenio;
   private String nombre;
@@ -28,7 +28,7 @@ public class Mascota{
      * @param raza -- Es la raza de la mascota.
      */
   public Mascota(String curp,
-  String clave,
+  int clave,
   FechaNac fechanac,
   Dueño duenio,
   String nombre,
@@ -73,7 +73,7 @@ public class Mascota{
      * Modifica la 
      * @param clave -- La nueva 
      */
-    public void setClave(String clave) {
+    public void setClave(int clave) {
         this.clave = clave;
     }
     /**
