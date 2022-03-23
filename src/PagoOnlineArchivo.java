@@ -6,7 +6,7 @@ public class PagoOnlineArchivo extends LeeryEscribir{
      * Constructor por omision que crea el archivo PagoOnline.csv
      */
     public PagoOnlineArchivo(){
-      super("Pago.csv");
+      super("PagoOnline.csv");
     }
 
     /**
