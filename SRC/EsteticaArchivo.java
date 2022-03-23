@@ -9,15 +9,15 @@ import java.util.ArrayList;
 public class EsteticaArchivo extends LeeryEscribir {
     
     /**
-     * 
+     * Constructor por omisión. Crea el File Estetica.csv.
      */
     public EsteticaArchivo(){
-        super("/home/alberto/UNAM/2022-2/Bases/Practica02/SRC/Estetica.csv");
+        super("Estetica.csv");
     }
 
     /**
-     * 
-     * @param esteticas
+     * Escribe una lista de Estéticas en un archivo csv.
+     * @param esteticas -- Lista de Estéticas que serán escritas.
      */
     public void escribeEstetica(ArrayList<Estetica> esteticas) {
         String lineaEstetica = "";
@@ -28,9 +28,9 @@ public class EsteticaArchivo extends LeeryEscribir {
     }
 
     /**
-     * 
-     * @return
-     * @throws ArchivoNoEsxiste
+     * Lee una lista de Estéticas de un archivo csv.
+     * @return -- La lista de Estéticas del archivo.
+     * @throws FileNotFoundException -- Cuando no encuentra el archivo Estetica.csv.
      */
     public ArrayList<Estetica> leeEsteticas() throws FileNotFoundException {
         String[] lineas = super.leeArchivo();
@@ -44,9 +44,9 @@ public class EsteticaArchivo extends LeeryEscribir {
     }
 
     /**
-     * 
-     * @param estetica
-     * @return
+     * Método auxiliar que convierte una línea con atributos en una Estética.
+     * @param estetica -- Cadena con los atributos de la estética separados por comas.
+     * @return -- Estética correspondiente a los atributos de la cadena.
      */
     private static Estetica parseaEstetica(String estetica) {
         String[] linea = estetica.trim().split(",");

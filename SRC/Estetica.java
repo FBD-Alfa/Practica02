@@ -1,5 +1,5 @@
 /**
- * Clase que representa una estética veterinaria Little Friend.
+ * Clase que representa una estética veterinaria de Little Friend.
  * @author Jesús Alberto Reyes Gutiérrez
  * @version 21/03/2022
  */
@@ -12,13 +12,13 @@ public class Estetica {
     private short noConsultorios;
 
     /**
-     * 
-     * @param clave
-     * @param nombre
-     * @param direccion
-     * @param telefono
-     * @param horario
-     * @param noConsultorios
+     * Constructor con todos los atributos.
+     * @param clave -- Es la clave de la estética.
+     * @param nombre -- Es el nombre de la estética.
+     * @param direccion -- Es la dirección de la estética.
+     * @param telefono -- Es el teléfono de la estética.
+     * @param horario -- Es el horario de servicio de la estética.
+     * @param noConsultorios -- Es la cantidad de consultorios de la estética (máximo 4).
      */
     public Estetica(int clave, String nombre, Direccion direccion,
                 long telefono, String horario, short noConsultorios) {
@@ -31,101 +31,105 @@ public class Estetica {
     }
 
     /**
-     * 
-     * @return
+     * Obtiene la clave de la estética.
+     * @return -- La clave de la estética.
      */
     public int getClave() {
         return clave;
     }
 
     /**
-     * 
-     * @param clave
+     * Modifica la clave de la estética.
+     * @param clave -- La nueva clave de la estética.
      */
     public void setClave(int clave) {
         this.clave = clave;
     }
     
     /**
-     * 
-     * @return
+     * Obtiene el nombre de la estética.
+     * @return -- El nombre de la estética.
      */
     public String getNombre() {
         return nombre;
     }
 
     /**
-     * 
-     * @param nombre
+     * Modifica el nombre de la estética.
+     * @param nombre -- El nuevo nombre de la estética
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
     /**
-     * 
-     * @return
+     * Obtiene la dirección de la estética.
+     * @return -- La dirección de la estética.
      */
     public Direccion getDireccion() {
         return direccion;
     }
 
     /**
-     * 
-     * @param direccion
+     * Modifica la dirección de la estética.
+     * @param direccion -- La nueva dirección de la estética.
      */
     public void setDireccion(Direccion direccion) {
         this.direccion = direccion;
     }
 
     /**
-     * 
-     * @return
+     * Obtiene el teléfono de la estética.
+     * @return -- El teléfono de la estética.
      */
     public long getTelefono() {
         return telefono;
     }
 
     /**
-     * 
-     * @param telefono
+     * Modifica el teléfono de la estética.
+     * @param telefono -- El nuevo teléfono de la estética.
      */
     public void setTelefono(long telefono) {
         this.telefono = telefono;
     }
 
     /**
-     * 
-     * @return
+     * Obtiene el horario de la estética.
+     * @return -- El horario de la estética.
      */
     public String getHorario() {
         return horario;
     }
 
     /**
-     * 
-     * @param horario
+     * Modifica el horario de la estética.
+     * @param horario -- El nuevo horario de la estética.
      */
     public void setHorario(String horario) {
         this.horario = horario;
     }
 
     /**
-     * 
-     * @return
+     * Obtiene el número de consultorios de la estética.
+     * @return -- El número de consultorios de la estética.
      */
     public short getNoConsultorios() {
         return noConsultorios;
     }
 
     /**
-     * 
-     * @param noConsultorios
+     * Modifica el número de consultorios de la estética.
+     * @param noConsultorios -- El nuevo número de consultorios.
      */
     public void setNoConsultorios(short noConsultorios) {
         this.noConsultorios = noConsultorios;
     }
 
+    /**
+     * Método toString de una Estética.
+     * @return -- Los atributos de la estética separados por coma en una cadena.
+     */
     @Override
     public String toString() {
         return this.clave + "," + this.nombre + "," + this.direccion.toString() +
