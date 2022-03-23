@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 /**
  * Clase que representa una estética veterinaria de Little Friend.
- * @author Aguirre Chavez Alejandra
+ * @author Aguirre Chavez Alejandra 
+ * @author Sanchez Urbano Cynthia Lizbeth
  * @version 21/03/2022
  */
 public class Mascota{
