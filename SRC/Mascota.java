@@ -10,7 +10,7 @@ public class Mascota{
   private String curp;
   private int clave;
   private FechaNac fechanac;
-  private Dueño duenio;
+  private String nombreDuenio;
   private String nombre;
   private float peso;
   private String especie;
@@ -27,18 +27,17 @@ public class Mascota{
      * @param especie -- Es la especie de la mascota.
      * @param raza -- Es la raza de la mascota.
      */
-  public Mascota(String curp,
-  int clave,
-  FechaNac fechanac,
-  Dueño duenio,
+  public Mascota(int clave,
+  String nombreDuenio,
   String nombre,
-  double peso,
+  FechaNac fechanac,
+  float peso,
   String especie,
   String raza) {
             this.curp = curp ;
             this.clave = clave;
             this.fechanac =fechanac;
-            this.duenio = duenio;
+            this.nombreDuenio = nombreDuenio;
             this.nombre = nombre;
             this.peso = peso;
             this.especie = especie;
@@ -46,21 +45,6 @@ public class Mascota{
 
     }
 
-  /**
-     * Obtiene la
-     * @return --
-     */
-    public String getCURP() {
-        return curp;
-    }
-
-    /**
-     * Modifica la
-     * @param clave -- La nueva
-     */
-    public void setCURP(String curp) {
-        this.curp = curp;
-    }
     /**
      * Obtiene la
      * @return --
@@ -95,16 +79,16 @@ public class Mascota{
      * Obtiene la
      * @return --
      */
-    public Dueño getDueño() {
-        return duenio ;
+    public String getNombreDueño() {
+        return nombreDuenio ;
     }
 
     /**
      * Modifica la
      * @param clave -- La nueva
      */
-    public void setDueño(Dueño duenio) {
-        this.duenio = duenio;
+    public void setNombreDueño(String nombreDuenio) {
+        this.nombreDuenio = nombreDuenio;
     }
     /**
      * Obtiene la
@@ -173,7 +157,7 @@ public class Mascota{
      */
     @Override
     public String toString() {
-        return this.clave + "," + this.nombre + "," + this.duenio.toString() + "," +
+        return this.clave + "," + this.nombre + "," + this.nombreDuenio + "," +
           this.fechanac.toString() +
         "," + this.peso + "," + this.especie + "," + this.raza;
     }
