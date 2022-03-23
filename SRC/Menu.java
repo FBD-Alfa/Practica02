@@ -7,11 +7,13 @@ import java.util.Scanner;
  */
 public class Menu {
     /* Variable entrada, permite la interacción con el usuario. */
-    private Scanner entrada = new Scanner(System.in);
-    String eleccion = "";
-    ArrayList<Estetica> esteticas = new ArrayList<>();
+    private Scanner entrada;
+    String eleccion;
+    ArrayList<Estetica> esteticas;
 
-    public Menu(ArrayList<Estetica> esteticas) {
+    public Menu(Scanner entrada, ArrayList<Estetica> esteticas) {
+        this.entrada = entrada;
+        eleccion = "";
         this.esteticas = esteticas;
     }
 
