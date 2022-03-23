@@ -4,25 +4,25 @@
  * @version 21/03/2022
  */
 public class Tarjeta {
-    private String curp;
+    //private String curp;
     private long numero;
     private String titular;
     private int cvv;
     private String vencimiento;
-    // Vencimiento objeto
+
 
 
     /**
      * @param numero
      * @param titular
      * @param cvv
-     * @param CURP
+     * @param vencimiento
+     
      */
-    public Tarjeta(long numero, String titular,int cvv, String curp, String vencimiento) {
+    public Tarjeta(long numero, String titular,int cvv, String vencimiento) {
         this.numero = numero;
         this.titular = titular;
         this.cvv = cvv;
-        this.curp = curp;
         this.vencimiento =vencimiento;
     }
 
@@ -68,20 +68,7 @@ public class Tarjeta {
     public void setCVV(String cvv) {
         this.cvv = cvv;
     }
-    /**
-     * 
-     * @return
-     */
-    public String getCURP() {
-        return curp;
-    }
-    /**
-     *
-     * @param CURP
-     */
-    public void setCURP(String curp) {
-        this.curp = curp;
-    }
+    
     /**
      * 
      * @return
@@ -97,12 +84,5 @@ public class Tarjeta {
         this.vencimiento = vencimiento;
     }
     
-        @Override
-    public String toString() {
-        /**
-         * FALTA IMPLEMENTAR (Devuelve los atributos en el
-        formato del csv).
-         */
-        return super.toString();
-    }
+
 }
