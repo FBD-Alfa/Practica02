@@ -1,21 +1,21 @@
 import java.util.ArrayList;
 /**
  * Clase que representa una estética veterinaria de Little Friend.
- * @author Aguirre Chavez Alejandra 
+ * @author Aguirre Chavez Alejandra
  * @author Sanchez Urbano Cynthia Lizbeth
  * @version 21/03/2022
  */
 public class Mascota{
-  
+
   private String curp;
-  private String clave;
+  private int clave;
   private FechaNac fechanac;
   private Dueño duenio;
   private String nombre;
   private double peso;
   private String especie;
   private String raza;
-  
+
   /**
      * Constructor con todos los atributos.
      * @param curp -- Es la curp del dueño
@@ -28,7 +28,7 @@ public class Mascota{
      * @param raza -- Es la raza de la mascota.
      */
   public Mascota(String curp,
-  String clave,
+  int clave,
   FechaNac fechanac,
   Dueño duenio,
   String nombre,
@@ -45,128 +45,128 @@ public class Mascota{
             this.raza = raza;
 
     }
-  
+
   /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
     public String getCURP() {
         return curp;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
     public void setCURP(String curp) {
         this.curp = curp;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
     public int getClave() {
         return clave;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
-    public void setClave(String clave) {
+    public void setClave(int clave) {
         this.clave = clave;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
-    public int getFechaNac() {
-        return fechaNac ;
+    public FechaNac getFechaNac() {
+        return fechanac ;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
-    public void setFechaNac(FechaNac fechaNac) {
-        this.fechaNac = fechaNac;
+    public void setFechaNac(FechaNac fechanac) {
+        this.fechanac = fechanac;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
-    public int getDueño() {
+    public Dueño getDueño() {
         return duenio ;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
     public void setDueño(Dueño duenio) {
         this.duenio = duenio;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
-    public int getPeso() {
+    public double getPeso() {
         return peso;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
     public void setPeso(double peso) {
         this.peso = peso;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
-    public int getEspecie() {
+    public String getEspecie() {
         return especie;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
     public void setEspecie(String especie) {
         this.especie = especie;
     }
     /**
-     * Obtiene la 
-     * @return -- 
+     * Obtiene la
+     * @return --
      */
-    public int getRaza() {
+    public String getRaza() {
         return raza;
     }
 
     /**
-     * Modifica la 
-     * @param clave -- La nueva 
+     * Modifica la
+     * @param clave -- La nueva
      */
     public void setRaza(String raza) {
         this.raza = raza;
     }
-  
+
    /**
      * Método toString de Mascota
      * @return -- Los atributos de la mascota separados por coma en una cadena.
@@ -174,8 +174,8 @@ public class Mascota{
     @Override
     public String toString() {
         return this.clave + "," + this.nombre + "," + this.duenio.toString() + "," +
-          this.fechanac.toString() + 
+          this.fechanac.toString() +
         "," + this.peso + "," + this.especie + "," + this.raza;
     }
-  
+
 }
