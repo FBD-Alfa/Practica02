@@ -10,7 +10,7 @@ public class DueñoArchivo extends LeeryEscribir {
      *
      */
     public DueñoArchivo(){
-        super("Duenio.csv");
+        super("Dueño.csv");
     }
 
     /**
@@ -42,11 +42,24 @@ public class DueñoArchivo extends LeeryEscribir {
     }
 
     /**
-     * FALTA IMPLEMENTAR
      * @param duenio
      * @return
      */
     private Dueño parseaDueño(String duenio) {
-        return null;
+        String[] linea = duenio.trim().split(",");
+        String CURP  = linea[0];
+        String nombre = linea[1];
+        String ApellidoP = linea[1];
+        String ApellidoM = linea[1];
+        String estado = linea[2];
+        String calle = linea[3];
+        String cp = linea[4];
+        String numDir = linea[5];
+        long numero = Long.parseLong(linea[6]);
+        long telefono = Long.parseLong(linea[7]);
+        String fecha = linea[8];
+        String email  = linea[9];
+        Direccion direccion = new Direccion(estado, calle, cp, numDir);
+        return new Dueño(CURP, nombre, ApellidoP, ApellidoM, direccion,telefono,fecha,email);
     }
 }
