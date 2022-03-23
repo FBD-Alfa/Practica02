@@ -44,7 +44,7 @@ public class Tarjeta {
      *
      * @return
      */
-    public String getTitularP() {
+    public String getTitular() {
         return titular;
     }
     /**
@@ -84,5 +84,12 @@ public class Tarjeta {
         this.vencimiento = vencimiento;
     }
 
+    /**
+     * Método toString, regresa una representación en cadena de la targeta.
+     * @return String, la representación en cadena de la targeta.
+     */
+     public String toString(){
+      return numero+","+ titular+","+cvv+","+vencimiento;
+    }
 
 }

@@ -1,7 +1,7 @@
 
 public class PagoFisico extends Pago{
 
-  private boolean targeta = false;
+  private boolean tarjeta = false;
   private boolean efectivo = false;
   private String tipoDePago = "";
   private String cliente = "";
@@ -9,14 +9,14 @@ public class PagoFisico extends Pago{
   /**
    * Constructor de Pago Fisico.
    * @param cliente, el nombre del cliente a pagar.
-   * @param tipoDePago, el tipo de pago "Efectivo" o "Targeta".
+   * @param tipoDePago, el tipo de pago "Efectivo" o "Tarjeta".
    */
    public PagoFisico(String cliente, String tipoDePago){
     this.cliente = cliente;
     if (tipoDePago.equals("Efectivo")){
       efectivo = true;
-    }else if (tipoDePago.equals("Targeta")){
-      targeta = true;
+    }else if (tipoDePago.equals("Tarjeta")){
+      tarjeta = true;
     }else{
       System.out.println("Ese tipo de pago no es valido.");
       return;
@@ -25,19 +25,19 @@ public class PagoFisico extends Pago{
   }
 
   /**
-   * Método setEsTargeta, cambia el valor booleano de targeta.
-   * @param boolean, targeta.
+   * Método setEsTarjeta, cambia el valor booleano de tarjeta.
+   * @param boolean, tarjeta.
    */
-  public void setEsTargeta(boolean targeta){
-    this.targeta = targeta;
+  public void setEsTarjeta(boolean tarjeta){
+    this.tarjeta = tarjeta;
   }
 
   /**
-   * Método getTargeta.
-   * @return boolean, true si es pago con targeta.
+   * Método getTarjeta.
+   * @return boolean, true si es pago con tarjeta.
    */
-  public boolean getTargeta(){
-    return targeta;
+  public boolean getTarjeta(){
+    return tarjeta;
   }
 
   /**
@@ -73,7 +73,7 @@ public class PagoFisico extends Pago{
   }
 
   /**
-   * Método setTipoDePago, cambia el tipo de pago "Efectivo" o "Targeta".
+   * Método setTipoDePago, cambia el tipo de pago "Efectivo" o "Tarjeta".
    * @param String, tipoDePago.
    */
    public void setTipoDePago(String tipoDePago){
@@ -82,7 +82,7 @@ public class PagoFisico extends Pago{
 
   /**
    * Método getTipoDePago.
-   * @return String, regresa el tipo de pago "Efectivo" o "Targeta".
+   * @return String, regresa el tipo de pago "Efectivo" o "Tarjeta".
    */
    public String getTipoDePago(){
     return tipoDePago;

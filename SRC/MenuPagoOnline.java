@@ -56,35 +56,35 @@ public class MenuPagoOnline {
     }
 
       public void despliegaCreaPagoOnline(){
-        int noTargeta = 0;
-        System.out.println("Ingresa el número de la targeta.");
-        String noTargetaCadena = entrada.nextLine();
+        int noTarjeta = 0;
+        System.out.println("Ingresa el número de la tarjeta.");
+        String noTarjetaCadena = entrada.nextLine();
         try{
-              noTargeta = Integer.parseInt(noTargetaCadena);
+              noTarjeta = Integer.parseInt(noTarjetaCadena);
           }
           catch (NumberFormatException ex){
               ex.printStackTrace();
           }
-        System.out.println("Ingresa el vencimiento de la targeta.");
+        System.out.println("Ingresa el vencimiento de la tarjeta.");
         String vencimiento = entrada.nextLine();
         System.out.println("Ingresa el nombre del titular.");
         String titular= entrada.nextLine();
-        PagoOnline nuevo = new PagoOnline(noTargeta, vencimiento, titular);
+        PagoOnline nuevo = new PagoOnline(noTarjeta, vencimiento, titular);
         pagosOnline.add(nuevo);
         archivo.escribePagosOnline(pagosOnline);
         despliegaMenuPrincipal();
       }
 
-      private PagoOnline buscaPago(String noTargetaCadena){
-        int noTargeta = 0;
+      private PagoOnline buscaPago(String noTarjetaCadena){
+        int noTarjeta = 0;
         try{
-              noTargeta = Integer.parseInt(noTargetaCadena);
+              noTarjeta = Integer.parseInt(noTarjetaCadena);
           }
           catch (NumberFormatException ex){
-              System.out.println("Ocurrio un error, puede que su número de targeta sea invalido");
+              System.out.println("Ocurrio un error, puede que su número de tarjeta sea invalido");
           }
         for (PagoOnline pago : pagosOnline){
-          if (pago.getNoTargeta() == noTargeta){
+          if (pago.getNoTarjeta() == noTarjeta){
             return pago;
           }
         }
@@ -93,7 +93,7 @@ public class MenuPagoOnline {
       }
 
       public void despliegaEditaPagoOnline(){
-        System.out.println("Escriba el número de targeta del pago que quiere editar.");
+        System.out.println("Escriba el número de tarjeta del pago que quiere editar.");
         PagoOnline pago = buscaPago(entrada.nextLine());
         if (pago != null){
           edita(pago);
@@ -102,7 +102,7 @@ public class MenuPagoOnline {
       }
 
       public void despliegaBorraPagoOnline(){
-        System.out.println("Escriba el número de targeta del pago que quiere borrar.");
+        System.out.println("Escriba el número de tarjeta del pago que quiere borrar.");
         PagoOnline pago = buscaPago(entrada.nextLine());
         if (pago != null){
           pagosOnline.remove(pago);
@@ -118,14 +118,14 @@ public class MenuPagoOnline {
 
       private void edita(PagoOnline pago){
         System.out.println("\n[ ¿Que campo desea editar? ]\n"+
-                           "1- Número de Targeta\n"+
+                           "1- Número de Tarjeta\n"+
                            "2- Vencimiento\n"+
                            "3- Titular\n"+
                            "4- Regresar al menu anterior\n");
                           String eleccion = entrada.nextLine();
         switch (eleccion) {
           case "1" :
-          cambiaNoTargeta(pago);
+          cambiaNoTarjeta(pago);
           break;
           case "2" :
           cambiaVencimiento(pago);
@@ -142,19 +142,19 @@ public class MenuPagoOnline {
       }
     }
 
-    private void cambiaNoTargeta(PagoOnline pago){
-      int noTargeta = 0;
-      System.out.println("Escriba el nuevo número de targeta.");
-      String noTargetaCadena = entrada.nextLine();
+    private void cambiaNoTarjeta(PagoOnline pago){
+      int noTarjeta = 0;
+      System.out.println("Escriba el nuevo número de tarjeta.");
+      String noTarjetaCadena = entrada.nextLine();
       try{
-          noTargeta = Integer.parseInt(noTargetaCadena);
+          noTarjeta = Integer.parseInt(noTarjetaCadena);
         }
         catch (NumberFormatException ex){
-          System.out.println("Ocurrio un error, puede que su número de targeta sea invalido");
+          System.out.println("Ocurrio un error, puede que su número de tarjeta sea invalido");
           edita(pago);
           return;
         }
-      pago.setNoTargeta(noTargeta);
+      pago.setNoTarjeta(noTarjeta);
       archivo.escribePagosOnline(pagosOnline);
     }
 

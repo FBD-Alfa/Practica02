@@ -25,7 +25,7 @@ public class MenuPagoFisico {
    public void despliegaMenuPrincipal(){
      System.out.println("\n[ Ingresa la opción deseada ]\n" +
                         "1-Pago efectivo\n" +
-                        "2-Pago por targeta\n"+
+                        "2-Pago por tarjeta\n"+
                         "3-Ver pagos fisicos\n"+
                         "4-Menu anterior\n"+
                         "5-Salir\n");
@@ -42,7 +42,7 @@ public class MenuPagoFisico {
        case "2" :
        System.out.println("Escriba el nombre del cliente\n");
        String c2 = entrada.nextLine();
-       PagoFisico pf2 = new PagoFisico(c2,"Targeta");
+       PagoFisico pf2 = new PagoFisico(c2,"Tarjeta");
        pagosFisicos.add(pf2);
        archivo.escribePagosFisicos(pagosFisicos);
        despliegaMenuPrincipal();
