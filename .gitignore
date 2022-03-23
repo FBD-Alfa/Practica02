@@ -1,0 +1,5 @@
+# Ignorar a todas los ejecutables:
+*.class
+
+# Ignorar los proyectos de IntelliJ:
+*.idea
