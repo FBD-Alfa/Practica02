@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  * Clase que representa una estética veterinaria de Little Friend.
  * @author Jesús Alberto Reyes Gutiérrez
@@ -45,7 +46,7 @@ public class Estetica {
     public void setClave(int clave) {
         this.clave = clave;
     }
-    
+
     /**
      * Obtiene el nombre de la estética.
      * @return -- El nombre de la estética.

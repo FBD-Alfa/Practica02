@@ -1,22 +1,23 @@
+import java.util.ArrayList;
 /**
  * Clase que permite leer y escribir una Estetica sobre archivos tipo csv.
  * @author Castro Romero Ares Gael
  * @version 21/03/2022
  */
 public class DueñoArchivo extends LeeryEscribir {
-    
+
     /**
-     * 
+     *
      */
     public DueñoArchivo(){
         super("Duenio.csv");
     }
 
     /**
-     * 
+     *
      * @param duenios
      */
-    public void escribeEstetica(ArrayList<Dueño> duenios) {
+    public void escribeDueño(ArrayList<Dueño> duenios) {
         String lineaDuenio = "";
 	    for (Dueño duenio: duenios) {
 		    lineaDuenio += duenios + "\n";
@@ -25,19 +26,19 @@ public class DueñoArchivo extends LeeryEscribir {
     }
 
     /**
-     * 
+     *
      * @return
-     * @throws ArchivoNoEsxiste
+     * @throws ArchivoNoExiste
      */
-    public ArrayList<Dueño> leeEsteticas() throws ArchivoNoEsxiste {
+    public ArrayList<Dueño> leeDueños() throws ArchivoNoExiste {
         String[] lineas = super.leeArchivo();
-        ArrayList<Operador> operadores = new ArrayList<>();
+        ArrayList<Dueño> dueños = new ArrayList<>();
         for (int i = 0; i < lineas.length; i++) {
             if (!lineas[i].equals("null")) {
-                operadores.add(parseaOperador(lineas[i]));
+                dueños.add(parseaDueño(lineas[i]));
             }
         }
-	    return operadores;
+	    return dueños;
     }
 
     /**
@@ -45,7 +46,7 @@ public class DueñoArchivo extends LeeryEscribir {
      * @param duenio
      * @return
      */
-    private Dueño parseaEstetica(String duenio) {
+    private Dueño parseaDueño(String duenio) {
         return null;
     }
 }

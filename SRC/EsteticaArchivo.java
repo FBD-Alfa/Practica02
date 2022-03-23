@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @version 21/03/2022
  */
 public class EsteticaArchivo extends LeeryEscribir {
-    
+
     /**
      * Constructor por omisión. Crea el File Estetica.csv.
      */
@@ -32,7 +32,7 @@ public class EsteticaArchivo extends LeeryEscribir {
      * @return -- La lista de Estéticas del archivo.
      * @throws FileNotFoundException -- Cuando no encuentra el archivo Estetica.csv.
      */
-    public ArrayList<Estetica> leeEsteticas() throws FileNotFoundException {
+    public ArrayList<Estetica> leeEsteticas() throws ArchivoNoExiste {
         String[] lineas = super.leeArchivo();
         ArrayList<Estetica> esteticas = new ArrayList<>();
         for (int i = 0; i < lineas.length; i++) {

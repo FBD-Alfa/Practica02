@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 /**
  * Clase que representa un dueño de la veterinaria Little Friend.
  * @author Castro Romero Ares Gael
@@ -28,7 +29,7 @@ public class Dueño {
      * @param telefono
      * @param tarjeta
      */
-    public Estetica(String nombre, String ApellidoP, String ApellidoM, String CURP, Direccion direccion, long telefono, String fecha, String email, Mascotas [] mascotas , Tarjeta tarjeta) {
+    public Dueño(String nombre, String ApellidoP, String ApellidoM, String CURP, Direccion direccion, long telefono, String fecha, String email, Mascota[] mascotas , Tarjeta tarjeta) {
         this.nombre = nombre;
         this.ApellidoP = ApellidoP;
         this.ApellidoM = ApellidoM;
@@ -42,7 +43,7 @@ public class Dueño {
     }
 
     /**
-     * 
+     *
      * @return
      */
     public String getNombre() {
@@ -56,7 +57,7 @@ public class Dueño {
         this.nombre = nombre;
     }
     /**
-     * 
+     *
      * @return
      */
     public String getApellidoP() {
@@ -70,7 +71,7 @@ public class Dueño {
         this.ApellidoP = ApellidoP;
     }
     /**
-     * 
+     *
      * @return
      */
     public String getApellidoM() {
@@ -84,7 +85,7 @@ public class Dueño {
         this.ApellidoM = ApellidoM;
     }
     /**
-     * 
+     *
      * @return
      */
     public String getCURP() {
@@ -98,7 +99,7 @@ public class Dueño {
         this.CURP = CURP;
     }
     /**
-     * 
+     *
      * @return
      */
     public Direccion getDireccion() {
@@ -112,21 +113,21 @@ public class Dueño {
         this.direccion = direccion;
     }
     /**
-     * 
+     *
      * @return
      */
-    public long getFecha() {
+    public String getFecha() {
         return fecha;
     }
     /**
      *
      * @param fecha
      */
-    public void setFecha(long fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
     /**
-     * 
+     *
      * @return
      */
     public String geteEmail() {
@@ -140,10 +141,10 @@ public class Dueño {
         this.email = email;
     }
     /**
-     * 
+     *
      * @return
      */
-    public String getMascotas() {
+    public Mascota[] getMascotas() {
         return mascotas;
     }
     /**
@@ -154,7 +155,7 @@ public class Dueño {
         this.mascotas = mascotas;
     }
     /**
-     * 
+     *
      * @return
      */
     public Tarjeta getTarjetas() {

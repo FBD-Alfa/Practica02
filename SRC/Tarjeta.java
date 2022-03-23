@@ -17,7 +17,7 @@ public class Tarjeta {
      * @param titular
      * @param cvv
      * @param vencimiento
-     
+
      */
     public Tarjeta(long numero, String titular,int cvv, String vencimiento) {
         this.numero = numero;
@@ -27,21 +27,21 @@ public class Tarjeta {
     }
 
     /**
-     * 
+     *
      * @return
      */
-    public String getNumero() {
+    public long getNumero() {
         return numero;
     }
     /**
      *
      * @param nombre
      */
-    public void setNumero(String numero) {
+    public void setNumero(long numero) {
         this.numero = numero;
     }
     /**
-     * 
+     *
      * @return
      */
     public String getTitularP() {
@@ -55,25 +55,25 @@ public class Tarjeta {
         this.titular = titular;
     }
     /**
-     * 
+     *
      * @return
      */
-    public String getCVV() {
+    public int getCVV() {
         return cvv;
     }
     /**
      *
      * @param CVV
      */
-    public void setCVV(String cvv) {
+    public void setCVV(int cvv) {
         this.cvv = cvv;
     }
-    
+
     /**
-     * 
+     *
      * @return
      */
-    public Vencimiento getVencimiento() {
+    public String getVencimiento() {
         return vencimiento;
     }
     /**
@@ -83,6 +83,6 @@ public class Tarjeta {
     public void setVencimiento(String vencimiento) {
         this.vencimiento = vencimiento;
     }
-    
+
 
 }

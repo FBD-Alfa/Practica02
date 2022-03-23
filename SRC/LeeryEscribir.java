@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class LeeryEscribir {
     protected File file;
-    
+
     /**
      * Constructor por parametros
      * @param nombreArchivo -- El NombredelArchivo que se creara
@@ -43,7 +43,7 @@ public class LeeryEscribir {
      * @return String[] -- Contiene como elemento cada linea del archivo.
      * @throws ArchivoNoExiste -- Excepcion que sale cuando el archivo no se ha a creado.
      */
-    public String[] leeArchivo() throws FileNotFoundException{		
+    public String[] leeArchivo() throws ArchivoNoExiste{
 	    Scanner input = null;
 	    String lineas = "";
 	    try {
@@ -53,12 +53,10 @@ public class LeeryEscribir {
             }
             input.close();
 	    } catch (FileNotFoundException e) {
-            throw new FileNotFoundException("No hay datos que se puedan leer");
+            throw new ArchivoNoExiste("No hay datos que se puedan leer");
 	    }
 	    String lines [] = lineas.split("\\|");
 	    return lines;
     }
 
 }
-
-
