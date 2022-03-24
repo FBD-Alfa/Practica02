@@ -34,7 +34,8 @@ public class Menu {
         eleccion = entrada.nextLine();
         switch (eleccion) {
             case "1":
-            MenuEstetica me = new MenuEstetica(this,esteticas,archivo);
+            MenuEstetica me = new MenuEstetica(esteticas);
+            me.despliegaMenusEstetica();
             break;
 
             case "4":

@@ -10,8 +10,8 @@ public class Main {
   private static Menu menu = new Menu();
 
     /**
-     * FALTA MODIFICAR
-     * @param args the command line arguments
+     * Comienza la interfaz de terminal.
+     * @param args los argumentos de comando.
      */
     public static void main(String[] args) {
       menu.despliegaMenu();

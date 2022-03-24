@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 /**
  * Clase MenuEstetica, maneja los menus de las Estéticas.
  * @author Jesús Alberto Reyes Gutiérrez
@@ -30,13 +31,13 @@ public class MenuEstetica {
                            " 5-Salir");
         eleccion = entrada.nextLine();
         switch (eleccion) {
-        case "1":
+            case "1":
             despliegaMenuAgregEst();
             break;
 
             case "2":
             if (esteticas.size()<1){
-                System.out.println("No hay esteticas registradas");
+                System.out.println("No hay esteticas registradas.");
                 break;
             } else {
                 for(int i=0;i<esteticas.size();i++)
@@ -52,7 +53,7 @@ public class MenuEstetica {
             System.out.println("\nIngresa la clave de la Estética que quieres borrar: ");
             int clave;
             try {
-                clave = entrada.nextInt();
+                clave = Integer.parseInt(entrada.nextLine());
             } catch (InputMismatchException e) {
                 System.out.println("Ingresa una clave entera.");
                 break;
@@ -95,7 +96,7 @@ public class MenuEstetica {
         System.out.println("Ingresa la clave de la nueva estética: ");
         int clave;
         try {
-            clave = entrada.nextInt();
+            clave = Integer.parseInt(entrada.nextLine());
         } catch (InputMismatchException e) {
             System.out.println("Debes ingresar una clave válida.");
             return;
@@ -121,7 +122,9 @@ public class MenuEstetica {
             System.out.println("Debes ingresar un número válido.");
             return;
         }
-        esteticas.add(new Estetica(clave, nombre, direccion, telefono, horario, noConsult));
+        Estetica estetica = new Estetica(clave, nombre, direccion, telefono, horario, noConsult);
+        System.out.println(estetica.toString());
+        esteticas.add(estetica);
         System.out.println("Estética " + clave + " agregada con éxito");
     }
 
@@ -132,7 +135,7 @@ public class MenuEstetica {
         System.out.println("\nIngresa la clave de la Estética que quieres modificar: ");
         int clave;
         try {
-            clave = entrada.nextInt();
+            clave = Integer.parseInt(entrada.nextLine());
         } catch (InputMismatchException e) {
             System.out.println("Debes ingresar una clave válida.");
             return;
@@ -232,5 +235,9 @@ public class MenuEstetica {
         System.out.println("Ingrese el número de la dirección: ");
         String numero = entrada.nextLine();
         return new Direccion(estado, calle, cp, numero);
+    }
+    public static void main(String[] args) {
+        MenuEstetica menu = new MenuEstetica(new ArrayList<>());
+        menu.despliegaMenuAgregEst();
     }
  }
