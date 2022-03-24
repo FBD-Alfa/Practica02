@@ -31,7 +31,7 @@ public class MenuMascota {
    public MenuInicioMascota(Menu menu) {
      System.out.println("Cargando datos...");
      try{
-       mascotas = archivo.leeMAscotas();
+       mascotas = archivo.leeMascotas();
        System.out.println("Listo...");
      }catch(Exception e){
        System.out.println(e);
