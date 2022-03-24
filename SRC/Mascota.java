@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Mascota{
 
-  private String curp;
+  //private String curp;
   private int clave;
   private FechaNac fechanac;
   private String nombreDuenio;
@@ -34,7 +34,7 @@ public class Mascota{
   float peso,
   String especie,
   String raza) {
-            this.curp = curp ;
+            //this.curp = curp ;
             this.clave = clave;
             this.fechanac =fechanac;
             this.nombreDuenio = nombreDuenio;
@@ -79,7 +79,7 @@ public class Mascota{
      * Obtiene la
      * @return --
      */
-    public String getNombreDueño() {
+    public String getNombreDuenio() {
         return nombreDuenio ;
     }
 
@@ -87,7 +87,7 @@ public class Mascota{
      * Modifica la
      * @param clave -- La nueva
      */
-    public void setNombreDueño(String nombreDuenio) {
+    public void setNombreDuenio(String nombreDuenio) {
         this.nombreDuenio = nombreDuenio;
     }
     /**
@@ -157,7 +157,7 @@ public class Mascota{
      */
     @Override
     public String toString() {
-        return this.clave + "," + this.nombre + "," + this.nombreDuenio + "," +
+        return this.clave + "," + this.nombreDuenio + "," + this.nombre + "," +
           this.fechanac.toString() +
         "," + this.peso + "," + this.especie + "," + this.raza;
     }
