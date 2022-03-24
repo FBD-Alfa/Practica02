@@ -42,9 +42,9 @@ public class PagoOnlineArchivo extends LeeryEscribir{
     }
 
     /**
-     * Metodo que recibe una cadena y parsea los datos para crear a un Operador
-     * @param cadenaOperador -- La cadena  parsear
-     * @return el objeto con los datos de la cadena
+     * Metodo que recibe una cadena y parsea los datos para crear a un PagoOnline
+     * @param cadenaPagoOnline -- La cadena  parsear
+     * @return el PagoOnline con los datos de la cadena
      */
     private PagoOnline parseaPagoOnline(String cadenaPagoOnline) {
       String linea[] = cadenaPagoOnline.trim().split(",");

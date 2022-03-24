@@ -42,9 +42,9 @@ public class PagoFisicoArchivo extends LeeryEscribir{
     }
 
     /**
-     * Metodo que recibe una cadena y parsea los datos para crear a un Operador
-     * @param cadenaOperador -- La cadena  parsear
-     * @return el objeto con los datos de la cadena
+     * Metodo que recibe una cadena y parsea los datos para crear a un PagoFisico
+     * @param cadenaPagoFisico -- La cadena  parsear
+     * @return el PagoFisico con los datos de la cadena
      */
     private PagoFisico parseaPagoFisico(String cadenaPagoFisico) {
       String linea[] = cadenaPagoFisico.trim().split(",");

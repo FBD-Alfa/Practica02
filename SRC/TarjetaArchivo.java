@@ -43,9 +43,9 @@ public class TarjetaArchivo extends LeeryEscribir{
     }
 
     /**
-     * Metodo que recibe una cadena y parsea los datos para crear a un Operador
-     * @param cadenaOperador -- La cadena  parsear
-     * @return el objeto con los datos de la cadena
+     * Metodo que recibe una cadena y parsea los datos para crear una tarjeta.
+     * @param cadenaTarjeta -- La cadena  parsear
+     * @return la tarjeta con los datos de la cadena
      */
     private Tarjeta parseaTarjeta(String cadenaTarjeta) {
       String linea[] = cadenaTarjeta.trim().split(",");
@@ -60,7 +60,6 @@ public class TarjetaArchivo extends LeeryEscribir{
             cvv = Integer.parseInt(cvvCadena);
         }
         catch (NumberFormatException ex){
-            //ex.printStackTrace();
             System.out.println("Ese número no es valido");
         }
       return new Tarjeta(numero, titular, cvv, vencimiento);
