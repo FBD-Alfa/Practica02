@@ -20,7 +20,8 @@ public class EsteticaArchivo extends LeeryEscribir {
      * @param esteticas -- Lista de Estéticas que serán escritas.
      */
     public void escribeEstetica(ArrayList<Estetica> esteticas) {
-        String lineaEstetica = "";
+        String lineaEstetica = "Clave,Nombre,Estado,Calle,CP,Número,Teléfono," +
+                                "Horario,#Consultorios\n";
 	    for (Estetica estetica : esteticas) {
 		    lineaEstetica += estetica + "\n";
 	    }
@@ -35,7 +36,7 @@ public class EsteticaArchivo extends LeeryEscribir {
     public ArrayList<Estetica> leeEsteticas() throws ArchivoNoExiste {
         String[] lineas = super.leeArchivo();
         ArrayList<Estetica> esteticas = new ArrayList<>();
-        for (int i = 0; i < lineas.length; i++) {
+        for (int i = 1; i < lineas.length; i++) {
             if (!lineas[i].equals("null")) {
                 esteticas.add(parseaEstetica(lineas[i]));
             }
