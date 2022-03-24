@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 /**
  * Clase que representa una estética veterinaria de Little Friend.
  * @author Jesús Alberto Reyes Gutiérrez
