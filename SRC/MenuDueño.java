@@ -274,8 +274,8 @@ public class MenuDueño {
                 case 2:
                     do{
                         bandera = true;
-                        System.out.println("Ingresa la opción deseada\n" + "1-Agregar Operador\n" + "2-Ver Operadores\n"
-                                           + "3-Editar Operador\n" + "4-Borrar Operador\n" + "5-Salir\n");
+                        System.out.println("Ingresa la opción deseada\n" + "1-Agregar Dueño\n" + "2-Ver Dueño\n"
+                                           + "3-Editar Dueño\n" + "4-Borrar Dueño\n" + "5-Salir\n");
                         try {
                             opcion = input.nextInt();
                         } catch (InputMismatchException e) {
@@ -446,7 +446,7 @@ public class MenuDueño {
                                         break;
                                     case 9:
                                         if(!dueños.isEmpty()){
-                                            System.out.println("Guardando datos de operadores...");
+                                            System.out.println("Guardando datos de dueños...");
                                             archivo.escribeDueño(dueños);
                                             System.out.println("Datos guardados");
                                         }
@@ -484,7 +484,7 @@ public class MenuDueño {
                                 }
                                 catch (InputMismatchException e) {
                                     input.next();
-                                    System.out.println("Ingresa adecuadamente el nombre del operador a eliminar");
+                                    System.out.println("Ingresa adecuadamente el nombre del dueño a eliminar");
                                 }
 
 
@@ -494,7 +494,7 @@ public class MenuDueño {
 					
                             case 5:
                                 if(!dueños.isEmpty()){
-                                    System.out.println("Guardando datos de operadores...");
+                                    System.out.println("Guardando datos de dueños...");
                                     archivo.escribeDueño(dueños);
                                     System.out.println("Datos guardados");
                                 }
