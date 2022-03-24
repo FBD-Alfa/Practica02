@@ -99,6 +99,20 @@ public class Dueño {
      *
      * @return
      */
+    public long getTelefono() {
+        return telefono;
+    }
+    /**
+     *
+     * @param nombre
+     */
+    public void setTelefono(long telefono) {
+        this.telefono = telefono;
+    }
+    /**
+     *
+     * @return
+     */
     public Direccion getDireccion() {
         return direccion;
     }

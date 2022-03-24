@@ -36,7 +36,10 @@ public class Menu {
             MenuEstetica me = new MenuEstetica(esteticas);
             me.despliegaMenusEstetica();
             break;
-
+            case "2":
+            MenuDueño menu = new MenuDueño();
+            menu.main(null);
+            break;
             case "4":
             despliegaMenusPago();
             break;
