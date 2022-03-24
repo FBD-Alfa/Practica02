@@ -10,11 +10,9 @@ import java.util.Scanner;
 
 public class MenuMascota {
   private ArrayList<Mascota> mascotas;
-  //private MascotaArchivo archivo = new MascotaArchivo();
-  /* Variable entrada, permite la interacción con el usuario. */
   private Scanner entrada = new Scanner(System.in);
-  //private Menu menu;
   private String eleccion = "";
+  private MascotaArchivo archivo = new MascotaArchivo();
   
      /**
      * Constructor básico.
@@ -28,18 +26,19 @@ public class MenuMascota {
   /**
    * @param args the command line arguments
    */
-   public MenuInicioMascota(Menu menu) {
+   /**
+     public Menu() {
      System.out.println("Cargando datos...");
      try{
-       mascotas = archivo.leeMAscotas();
+       mascotas = archivo.leeMascotas();
        System.out.println("Listo...");
      }catch(Exception e){
        System.out.println(e);
      }
-     despliegaMenuMascota();
    }
-
-   public void despliegaMenuMascota(){
+   */
+ 
+   public void despliegaMenusMascota(){
      System.out.println("\n[ Ingresa la opción deseada ]\n" +
                         "1-Agregar Mascota\n" +
                         "2-Ver Mascotas\n"+
@@ -50,7 +49,7 @@ public class MenuMascota {
      switch (eleccion) {
        case "1" :
        despliegaMenuAgregMascota();
-       despliegaMenuMascota();
+       despliegaMenusMascota();
        break;
        case "2" :
        if (mascotas.size()<1){
@@ -61,11 +60,9 @@ public class MenuMascota {
                     System.out.println(mascotas.get(i).toString());
                 break;
             }
-       despliegaMenuMascota();
-       break;
        case "3" :
        despliegaMenuModMascota();
-       despliegaMenuMascota();
+       despliegaMenusMascota();
        break;
        case "4" :
        System.out.println("\nIngresa la clave de la mascota que quieres borrar: ");
@@ -88,17 +85,17 @@ public class MenuMascota {
                 }
             }
        
-       despliegaMenuMascota();
+       despliegaMenusMascota();
        break;
        case "5" :
        System.out.println("\n----------------[ FIN DEL PROGRAMA ADIÓS T-T ]---------------\n");
        System.exit(0);
        default:
        System.out.println("Esa opción no es valida, vuelvelo a intentar.\n");
-       despliegaMenuMascota();
+       despliegaMenusMascota();
      }
    }
- }
+
  
  
  /**
@@ -124,7 +121,7 @@ public class MenuMascota {
         
         float peso;
         try {
-            peso = Float.parseLong(entrada.nextLine());
+            peso = Float.parseFloat(entrada.nextLine());
         } catch (InputMismatchException e) {
             System.out.println("Debes ingresar un peso válido.");
             return;
@@ -194,7 +191,7 @@ public class MenuMascota {
             break;
 
             case "3":
-            mascota.setNombre(valoe);
+            mascota.setNombre(valor);
             System.out.println("Nombre de la mascota modificado con éxito.");
             break;
             
@@ -237,17 +234,19 @@ public class MenuMascota {
     * @return -- La dirección correspondiente a los parámetros dados en la terminal.
     */
     public FechaNac despliegaNuevaFecha() {
+        int dia,anio;
         System.out.println("Ingresa el dia de nacimiento de la mascota: ");
-        int dia = entrada.nextLine();
+        dia = Integer.parseInt(entrada.nextLine());
         System.out.println("Ingresa el mes de nacimiento de la mascota ");
         String mes = entrada.nextLine();
         System.out.println("Ingresa el año de nacimiento de la mascota ");
-        int anio = entrada.nextLine();
+        anio = Integer.parseInt(entrada.nextLine());
         return new FechaNac(dia, mes, anio);
     }
     public static void main(String[] args) {
         MenuMascota menu = new MenuMascota(new ArrayList<>());
         menu.despliegaMenuAgregMascota();
     }
- }
  
+ 
+}
