@@ -12,8 +12,10 @@ public class MenuPagoFisico {
   /* Variable entrada, permite la interacción con el usuario. */
   private Scanner entrada = new Scanner(System.in);
   private Menu menu;
+
   /**
-   * @param args the command line arguments
+   * Método MenuPagoOnline, maneja los menus de los pagos en línea.
+   * @param menu, el menu principal.
    */
    public MenuPagoFisico(Menu menu) {
      System.out.println("Cargando datos de Pagos Fisicos...");
@@ -26,7 +28,11 @@ public class MenuPagoFisico {
      despliegaMenuPrincipal();
    }
 
-   public void despliegaMenuPrincipal(){
+   /**
+    * Método despliegaMenuPrincipal, despliega las opciones principales
+    * de los pagos fisicos para la interacción con el usuario.
+    */
+    public void despliegaMenuPrincipal(){
      System.out.println("\n[ Ingresa la opción deseada ]\n" +
                         "1-Pago efectivo\n" +
                         "2-Pago por tarjeta\n"+
