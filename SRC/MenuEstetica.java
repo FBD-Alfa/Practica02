@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -54,7 +53,7 @@ public class MenuEstetica {
             int clave;
             try {
                 clave = Integer.parseInt(entrada.nextLine());
-            } catch (InputMismatchException e) {
+            } catch (NumberFormatException e) {
                 System.out.println("Ingresa una clave entera.");
                 break;
             }
@@ -97,7 +96,7 @@ public class MenuEstetica {
         int clave;
         try {
             clave = Integer.parseInt(entrada.nextLine());
-        } catch (InputMismatchException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Debes ingresar una clave válida.");
             return;
         }
@@ -108,7 +107,7 @@ public class MenuEstetica {
         Long telefono;
         try {
             telefono = Long.parseLong(entrada.nextLine());
-        } catch (InputMismatchException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Debes ingresar un teléfono válido.");
             return;
         }
@@ -118,7 +117,7 @@ public class MenuEstetica {
         Short noConsult;
         try {
             noConsult = Short.parseShort(entrada.nextLine());
-        } catch (InputMismatchException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Debes ingresar un número válido.");
             return;
         }
@@ -136,7 +135,7 @@ public class MenuEstetica {
         int clave;
         try {
             clave = Integer.parseInt(entrada.nextLine());
-        } catch (InputMismatchException e) {
+        } catch (NumberFormatException e) {
             System.out.println("Debes ingresar una clave válida.");
             return;
         }
