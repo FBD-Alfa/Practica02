@@ -7,22 +7,29 @@ import java.util.Scanner;
  * @version 21/03/2022
  */
 public class Menu {
-    /* Variable entrada, permite la interacción con el usuario. */
     private Scanner entrada = new Scanner(System.in);
     private String eleccion = "";
     private ArrayList<Estetica> esteticas = new ArrayList<>();
-    private EsteticaArchivo archivo = new EsteticaArchivo();
-    private ArrayList<Mascota> mascotas = new ArrayList<>(); /***/
+    private ArrayList<Mascota> mascotas = new ArrayList<>();
 
     
     public Menu(){
-      System.out.println("Cargando datos de Esteticas...");
-      try{
-        esteticas = archivo.leeEsteticas();
-        System.out.println("Listo...");
-      }catch(Exception e){
-        System.out.println(e);
-      }
+        System.out.println("Cargando datos de Esteticas...");
+        EsteticaArchivo archivo = new EsteticaArchivo();
+        try{
+            esteticas = archivo.leeEsteticas();
+            System.out.println("Listo...");
+        }catch(Exception e) {
+            System.out.println(e);
+        }
+        System.out.println("Cargando datos de Mascotas...");
+        MascotaArchivo archivo2 = new MascotaArchivo();
+        try{
+            mascotas = archivo2.leeMascotas();
+            System.out.println("Listo...");
+        }catch(Exception e){
+            System.out.println(e);
+        }
     }
     
     
@@ -39,10 +46,11 @@ public class Menu {
             MenuEstetica me = new MenuEstetica(esteticas);
             me.despliegaMenusEstetica();
             break;
-        case "2":
-            MenuDueño menu = new MenuDueño();
-            menu.main(null);
+
+            case "2":
+            MenuDueño.main(null);
             break;
+
             case "3":
             MenuMascota mema= new MenuMascota(mascotas);
             mema.despliegaMenusMascota();
