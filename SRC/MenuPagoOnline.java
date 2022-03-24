@@ -61,13 +61,13 @@ public class MenuPagoOnline {
     }
 
       public void despliegaCreaPagoOnline(){
-        int numero = 0;
+        long numero = 0;
         int cvv = 0;
         int cantidad = 0;
         System.out.println("Ingresa el número de la tarjeta.");
         String numeroCadena = entrada.nextLine();
         try{
-              numero = Integer.parseInt(numeroCadena);
+              numero = Long.parseLong(numeroCadena);
           }
           catch (NumberFormatException ex){
                 System.out.println("El número de la tarjeta no es valido");
@@ -76,6 +76,11 @@ public class MenuPagoOnline {
           }
         System.out.println("Ingresa el nombre del titular.");
         String titular = entrada.nextLine();
+        if (titular.isEmpty()) {
+          System.out.println("No ingresaste un nombre.");
+          despliegaMenuPrincipal();
+          return;
+        }
         System.out.println("Ingresa el cvv de la tarjeta");
         String cvvCadena = entrada.nextLine();
         try{
@@ -88,6 +93,11 @@ public class MenuPagoOnline {
           }
         System.out.println("Ingresa el vencimiento de la tarjeta.");
         String vencimiento = entrada.nextLine();
+        if (vencimiento.isEmpty()) {
+          System.out.println("No ingresaste una fecha de vencimiento.");
+          despliegaMenuPrincipal();
+          return;
+        }
         System.out.println("Ingresa la cantidad a pagar.");
         String cantidadCadena = entrada.nextLine();
         try{
