@@ -13,8 +13,7 @@ public class Dueño {
     private long telefono;
     private String fecha;
     private String email;
-    private Mascota [] mascotas= new Mascota [7];
-    private Tarjeta tarjeta;
+
 
     /**
      * @param nombre
@@ -29,7 +28,7 @@ public class Dueño {
      * @param telefono
      * @param tarjeta
      */
-    public Dueño(String nombre, String ApellidoP, String ApellidoM, String CURP, Direccion direccion, long telefono, String fecha, String email, Mascota[] mascotas , Tarjeta tarjeta) {
+    public Dueño(String CURP, String nombre, String ApellidoP, String ApellidoM,  Direccion direccion, long telefono, String fecha, String email) {
         this.nombre = nombre;
         this.ApellidoP = ApellidoP;
         this.ApellidoM = ApellidoM;
@@ -38,8 +37,6 @@ public class Dueño {
         this.telefono = telefono;
         this.fecha = fecha;
         this.email = email;
-        this.mascotas = mascotas;
-        this.tarjeta = tarjeta;
     }
 
     /**
@@ -140,40 +137,9 @@ public class Dueño {
     public void setEmail(String email) {
         this.email = email;
     }
-    /**
-     *
-     * @return
-     */
-    public Mascota[] getMascotas() {
-        return mascotas;
-    }
-    /**
-     *
-     * @param mascotas
-     */
-    public void setMascotas(Mascota[] mascotas) {
-        this.mascotas = mascotas;
-    }
-    /**
-     *
-     * @return
-     */
-    public Tarjeta getTarjetas() {
-        return tarjeta;
-    }
-    /**
-     *
-     * @param mascotas
-     */
-    public void setTarjeta(Tarjeta tarjeta) {
-        this.tarjeta = tarjeta;
-    }
+ 
     @Override
     public String toString() {
-        /**
-         * FALTA IMPLEMENTAR (Devuelve los atributos en el
-        formato del csv).
-         */
-        return super.toString();
+        return this.CURP + "," + this.nombre + "," + this.ApellidoP + "," + this.ApellidoM + "," +this.direccion.toString() + "," + this.telefono + "," +this.fecha + "," + this.email ;
     }
 }
