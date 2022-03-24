@@ -71,6 +71,8 @@ public class MenuPagoOnline {
           }
           catch (NumberFormatException ex){
                 System.out.println("El número de la tarjeta no es valido");
+                despliegaMenuPrincipal();
+                return;
           }
         System.out.println("Ingresa el nombre del titular.");
         String titular = entrada.nextLine();
@@ -81,6 +83,8 @@ public class MenuPagoOnline {
           }
           catch (NumberFormatException ex){
               System.out.println("El cvv no es valido");
+              despliegaMenuPrincipal();
+              return;
           }
         System.out.println("Ingresa el vencimiento de la tarjeta.");
         String vencimiento = entrada.nextLine();
@@ -91,6 +95,8 @@ public class MenuPagoOnline {
           }
           catch (NumberFormatException ex){
               System.out.println("La cantidad no es valida");
+              despliegaMenuPrincipal();
+              return;
           }
         PagoOnline nuevo = new PagoOnline(numero,titular,cvv,vencimiento,cantidad);
         pagosOnline.add(nuevo);
