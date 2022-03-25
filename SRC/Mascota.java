@@ -12,7 +12,7 @@ public class Mascota{
   private FechaNac fechanac;
   private String nombreDuenio;
   private String nombre;
-  private float peso;
+  private int peso;
   private String especie;
   private String raza;
 
@@ -31,7 +31,7 @@ public class Mascota{
   String nombreDuenio,
   String nombre,
   FechaNac fechanac,
-  float peso,
+  int peso,
   String especie,
   String raza) {
             //this.curp = curp ;
@@ -109,7 +109,7 @@ public class Mascota{
      * Obtiene la
      * @return --
      */
-    public float getPeso() {
+    public int getPeso() {
         return peso;
     }
 
@@ -117,7 +117,7 @@ public class Mascota{
      * Modifica la
      * @param clave -- La nueva
      */
-    public void setPeso(float peso) {
+    public void setPeso(int peso) {
         this.peso = peso;
     }
     /**
